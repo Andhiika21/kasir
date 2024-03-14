@@ -51,11 +51,11 @@ class BarangController extends Controller
     }
 
     public function destroy($id)
-{
+    {
     Barang::findOrFail($id)->delete();
 
     return redirect()->route('barang')->with('success', 'Barang berhasil dihapus');
-}
+    }
 
 
     // Menyimpan data barang baru

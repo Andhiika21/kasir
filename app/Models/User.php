@@ -26,6 +26,8 @@ class User extends Authenticatable
     ];
 
     
+    public static $roleuser = ['admin', 'petugas'];
+
     /**
      * The attributes that should be hidden for serialization.
      *

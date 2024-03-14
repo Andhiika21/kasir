@@ -24,7 +24,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-        <h1>Barang</h1>
+        <h1>Transaksi</h1>
         <div class="card-body">
         <table class="table table-bordered">
             <tr>

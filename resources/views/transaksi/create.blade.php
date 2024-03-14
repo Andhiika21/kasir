@@ -119,7 +119,7 @@
                         </tr>
                         <tr>  
                           <td>1</td>
-                          <td>Baso</td>
+                          <td>Mie Goreng</td>
                           <td>4</td>
                           <td>
                             <a href=""><i class="fas fa-times"></i></a>

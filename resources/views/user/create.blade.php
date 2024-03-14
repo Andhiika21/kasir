@@ -23,36 +23,8 @@
                 @include('partials.navbar')
 
                 <!-- Begin Page Content -->
-                <<div class="row p-2">
-                    <div class="col-md-6">
-                      <div class="card">
-                        <div class="card-body">
-    
-                          <div class="row">
-                            <div class="col-md-4">
-                              <label for="">Kode produk</label>
-                            </div>
-                            <div class="col-md-8">
-                              <select name="id_barang" class="form-control" id="">
-                                <option value="">--Nama Produk--</option>
-                              </select>
-                            </div>
-                          </div>
-    
-                          <div class="row">
-                            <div class="col-md-4">
-                              <label for="">Nama Barang</label>
-                            </div>
-                            <div class="col-md-8">
-                              <input type="text" class="form-control" name="nama_barang">
-                            </div>
-                          </div>
-    
-                        </div>
-                      </div>
-                    </div>
-                  </div> class="container-fluid">
-                  <h1>Barang</h1>
+                <div class="container-fluid">
+                  <h1>User</h1>
                   <div class="card-body">
                     <div class="content">
                         <div class="card card-info card-outline">
@@ -70,6 +42,14 @@
                                 <div class="form-group">
                                     <label for="name">Username :</label>
                                     <input type="text" name="username" class="form-control mb-3" autocomplete="off" autofocus required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="kategori">Kategori :</label>
+                                    <select name="kategori" class="form-control mb-3" autocomplete="off" autofocus required>
+                                    @foreach(\App\Models\User::$roleuser as $role)
+                                        <option value="{{ $role }}">{{ ucfirst($role) }}</option>
+                                    @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                   <label for="role">Role :</label>

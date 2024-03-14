@@ -67,69 +67,6 @@
                     </div>
                 </div>
 
-                {{-- <div class="container-fluid">
-                    <h1>Barang</h1>
-                    <div class="card-body">
-                      <div class="content">
-                          <div class="card card-info card-outline">
-                              <div class="card-header">
-                                  <h4>Tambah Barang</h4>
-                              </div>
-                            <div class="card-body">
-                              <form method="POST" action="{{ route('barang.store') }}">
-  
-                                  @csrf
-                                  <div class="form-group">
-                                      <label for="name">Nama Barang :</label>
-                                      <input type="text" name="name" class="form-control mb-3" autocomplete="off" autofocus required>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="role">Kategori :</label>
-                                    <select class="form-control" name="kategori" required>
-                                        @foreach(\App\Models\Barang::$kategoriValues as $kategori)
-                                            <option value="{{ $kategori }}">{{ ucfirst($kategori) }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                  <div class="form-group">
-                                      <label for="email">Harga :</label>
-                                      <input type="number" name="harga" class="form-control mb-3" autocomplete="off" autofocus required>
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="password">Stok :</label>
-                                      <input type="number" name="stok" class="form-control mb-3" minlength="8" autofocus required>
-                                  </div>
-                                  <div class="form-group">
-                                    <center>
-                                     <button type="submit" class="btn btn-primary">Simpan</button>
-                                  </div>
-                              </form>
-                            </div>
-                          </div>
-
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        
-
-                    <!-- Content Row -->
-
-                    <div class="row">
-
-                
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Content Column -->
-                        <div class="col-lg-6 mb-4">
-                        </div>
-
-                        <div class="col-lg-6 mb-4">
-                        </div>
-                    </div>
-                </div> --}}
                 <!-- /.container-fluid -->
             </div>
             <!-- End of Main Content -->

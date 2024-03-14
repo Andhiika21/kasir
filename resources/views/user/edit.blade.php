@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -33,7 +33,7 @@
                           <th>Username</th>
                           <th>Role</th>
                           <th>Email</th>
-                          <th>Aksi</th>
+                          <th>Password</th>
                       </tr>
                       
                     <!-- Page Heading -->
@@ -41,19 +41,19 @@
                         <a href="{{ route('user.create') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                             <i class="fas fa-plus"></i> Tambah User </a>
                     </div>
-                    <?php $no = 1; ?>
+
                     @foreach ($users as $user)
               <tr>
-                <td>{{ $no++ }}
-                <td>{{ $user->name }}</td>
-                <td>{{ $user->username }}</td>
-                <td>{{ $user->role }}</td>
-                <td>{{ $user->email }}</td>
-                <td><a href="" class="btn btn-warning m-1 "><i class="bi bi-pencil-square"></i>Edit</a>
-                    <form action="" method="post" style="display: inline">
+                <td >{{ $user->name }}</td>
+                <td >{{ $user->username }}</td>
+                <td >{{ $user->role }}</td>
+                <td >{{ $user->email }}</td>
+                <td >{{ $user->password }}</td>
+                <td><a href="{{ route('user.edit', $user->id) }}" class="btn btn-warning m-1 "><i class="bi bi-pencil-square"></i></a>
+                    <form action="{{ route('user.destroy', $user->id) }}" method="post" style="display: inline">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger" onclick="return confirm('Yakin Hapus?')">Hapus</button>
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Yakin Hapus?')"><i class="bi bi-trash"></i></button>
                     </form>
                     </td>
               </tr>

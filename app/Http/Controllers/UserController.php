@@ -23,7 +23,7 @@ class UserController extends Controller
         $request->validate([
             'nama' => 'required|string|max:255',
             'username' => 'required|string|unique:users,username|max:255',
-            'role' => 'required|in:admin,petugas',
+            'role' => 'required|in:' . implode(',',User::$roleuser),
             'email' => 'required|email|unique:users,email|max:255',
             'password' => 'required|string|min:8',
         ]);
@@ -49,7 +49,7 @@ class UserController extends Controller
         $request->validate([
             'nama' => 'required|string|max:255',
             'username' => 'required|string|unique:user,username|max:255',
-            'role' => 'required|in:admin,petugas',
+            'role' => 'required|in:' . implode(',',User::$roleuser),
             'email' => 'required|email|unique:user,email|max:255'.$user->id,
             'password' => 'nullable|min:8',
         ]);
